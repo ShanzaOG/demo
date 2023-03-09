@@ -14,7 +14,7 @@ import java.util.UUID;
 public class PersonService {
     private final PersonDao personDao;
 
-    @Autowired    //because were are injection into the constructor.
+    @Autowired    //because we are injecting into the constructor.
     //Because we may have many  implementation of the Interface DAO we also add a qualifier
     public PersonService(@Qualifier("fakeDao") PersonDao personDao) {//adding a qualifier to distinguish
         this.personDao = personDao;//auto wiring our interface
